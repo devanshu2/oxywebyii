@@ -1,0 +1,486 @@
+/* -------------------- general -------------------- */
+* { padding: 0px; margin: 0px; box-sizing: border-box; }
+html, body { font-family: 'MyriadProRegular'; font-size: 18px; color: #8c806e; }
+input, select, textarea { font-family: Arial; font-size: 18px; color: #8c806e; }
+body { background: #fff; }
+img { border: 0px; display: block; max-width: 100%; height: auto; }
+a, input { outline: none; }
+
+/* -------------------- global classes -------------------- */
+.clear { clear: both; height: 0px; overflow: hidden; }
+.full-width { width: 100%; }
+.inner-width { width: 100%; margin: 0 auto; max-width: 1190px; padding: 0 10px; }
+.float-right { float: right; }
+.float-left { float: left; }
+.display-none { display: none; }
+.table { display: table; }
+.table-cell { display: table-cell; vertical-align: middle; }
+.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+.clearfix { display: inline-block; }
+
+
+/* -------------------- wrapper -------------------- */
+#wrapper { position: relative; display: block; width: 100%; min-height: 100%; }
+
+/* -------------------- main container -------------------- */
+#mainCntr { margin: 0 auto; width: 100%; }
+
+	/* -------------------- header container -------------------- */
+	#headerCntr { padding: 10px 0; position: relative; width: 100%; float: left; text-align: center; z-index: 9999; }
+	#headerCntr h1 { float: left; margin: 3px 30px 0 0; }
+	#headerCntr h1 a { display: block;text-indent: -9999px; width: 157px; height: 52px; background: url('../images/logo.png') no-repeat; }
+	#headerCntr .float-right { margin: 0px 0 0 30px; }
+	#headerCntr .kenStar { float: left; display: inline-block; }
+	#headerCntr .flipcard { margin: 8px 52px 0 0; float: left; display: inline-block; }
+	
+		.navbar { cursor: pointer; z-index: 9999; position: fixed; left: 0px; top: 0px; display: none; padding: 14px; width: 58px; background: #fff; border: #999 solid 1px; }
+		.navicon-line { background-color: #1d1d1b; border-radius: 1px; height: 4px; margin-bottom: 3px; width: 100%; }
+	
+		/* -------------------- menu box -------------------- */
+		.menuBox { padding-top: 11px; }
+		.menuBox ul { list-style: none; }
+		.menuBox li { float: left; line-height: 23px; }
+		.menuBox a { padding: 0px 1.111em 0 1.111em; font-size: 1em; display: block; font-family: 'MyriadProSemibold'; color: #333132; text-decoration: none; text-transform: uppercase; }
+		.menuBox a:hover, .menuBox li.current-menu a { color: #999;}
+		
+	.dack { position: fixed; left: 0; top: -100px; height: 50px; z-index: 9999; background: #fff; -webkit-transition:top .5s ease-out,background-color .5s ease-out;-moz-transition:top .5s ease-out,background-color .5s ease-out;-o-transition:top .5s ease-out,background-color .5s ease-out;transition:top .5s ease-out,background-color .5s ease-out; -webkit-box-shadow:0 1px 3px rgba(0,0,0,0.2);-moz-box-shadow:0 1px 3px rgba(0,0,0,0.2);box-shadow:0 1px 3px rgba(0,0,0,0.2); }
+	.dack.show { left: 0; top: 0px; }
+	.dack h1 { float: left; margin: 5px 30px 0 0; }
+	.dack h1 a { display: block;text-indent: -9999px; width: 157px; height: 39px; background: url('../images/logo.png') no-repeat; }
+	.dack .float-right img { width: 80%; }
+	.dack .kenStar { float: left; display: inline-block; }
+	.dack .flipcard { margin: 8px 52px 0 0; float: left; display: inline-block; }
+	
+		/* -------------------- link box -------------------- */
+		.linkBox { padding-top: 13px; }
+		.linkBox ul { list-style: none; }
+		.linkBox li { float: left; line-height: 24px; }
+		.linkBox a { padding: 0px 1.111em 0 1.111em; font-size: 1em; display: block; font-family: 'MyriadProSemibold'; color: #333132; text-decoration: none; text-transform: uppercase; }
+		.linkBox a:hover, .linkBox li.current-menu a { color: #999;}
+		
+	/* -------------------- content container -------------------- */
+	#contentCntr { overflow: hidden; width: 100%; clear: both; }
+	
+		/* ### center container ### */
+		#centerCntr { width: 100%; }
+		.contentbg{ background:#f1f2f2;}
+		
+			/* -------------------- food box -------------------- */
+			.foodBox { min-height: 660px; padding: 2.556em 0; position: relative; width: 100%; overflow: hidden; background: #212a28 url(../images/bg1.jpg) center -20px no-repeat; color: #fff; background-attachment: fixed; }
+			.foodBox h2 { padding-bottom: 2.500em; text-align: center; font-size: 2.000em; font-family: 'MyriadProLight'; }
+			.foodBox .left { width: 100%; max-width: 310px; }
+			.foodBox .right { width: 100%; max-width: 310px; }
+			.foodBox p { font-size: 1em; margin-bottom: 1.111em; text-align: justify; }
+			.foodBox img { margin: 39px 0 20px 0;}
+			.foodBox a.slide { display: block; position: absolute; text-indent: -9999px; margin-left: -14px; left: 50%; bottom: 1.500em; background: url(../images/slide_arrow.png) left top no-repeat; width: 38px; height: 24px; cursor: pointer; opacity: 0.5; }
+			.foodBox a.slide:hover { opacity: 1; }
+		
+			/* -------------------- slider box -------------------- */
+			.sliderBox { overflow: hidden; width: 100%; position: relative; }
+			.sliderBox .flexslider { width: 100%; }
+			.sliderBox .flex-control-nav {width: 100%; position: absolute; z-index: 999; bottom: 40px; text-align: center; }
+			.sliderBox .flex-control-nav li { margin: 0 6px; display: inline-block; zoom: 1; *display: inline; }
+			.sliderBox .flex-control-nav a { text-indent: -9999px; display: inline-block; overflow: hidden; width: 22px; height: 22px; background: url(../images/slider_nonactive.png) center center no-repeat; }
+			.sliderBox .flex-control-nav a.flex-active { background: url(../images/slider_active.png) center center no-repeat; }
+			.sliderBox .slidercontent { padding-top: 258px; position:absolute; z-index:9; top:0; width: 100%; }
+			.sliderBox .slidercontent h2 { color: #231f20; font-size: 1.889em; line-height: 1em; max-width: 310px; padding-bottom: 0.882em  }
+			.sliderBox .slidercontent p { color: #231f20; font-size: 1.333em; line-height: 1.250em; max-width: 310px;}
+			.sliderBox .flexslider img { margin: 0 auto; }
+			.flex-direction-nav { display: none; }
+		
+			/* -------------------- howtouse box -------------------- */
+			.howtouseBox { height: 768px; width: 100%; overflow: hidden; background: #222 url(../images/bg2.jpg) center bottom no-repeat; color: #fff; }
+			.howtouseBox .inner-width, .howtouseBox .text { height: 100%; }
+			.howtouseBox .text { max-width: 463px; display: table; float: right; }
+			.howtouseBox h2 { padding-bottom: 0.794em; font-size: 1.889em; font-family: 'MyriadProBold'; }
+			.howtouseBox p { margin-bottom: 0.417em; font-size: 1.333em; }
+		
+			/* -------------------- delicious box -------------------- */
+			.deliciousBox { padding: 38px 0; text-align: center; width: 100%; overflow: hidden; background: #fcf0e7 url(../images/bg3.jpg) center bottom no-repeat; color: #fff; background-size: 100% 100%; background-attachment: fixed; }
+			.deliciousBox ul { width: 100%; overflow: hidden; } 
+			.deliciousBox li { padding: 1px 0.68% 0.51% 1px; margin: 5px 4.3% 5px 3.45%; max-width: 25.47%; float: left; list-style: none; background: url(../images/image_frame.png) left top no-repeat; background-size: 100% 100%; }
+			.deliciousBox li img { opacity: 1;transition: opacity .25s ease-in-out;  -moz-transition: opacity .25s ease-in-out;  -webkit-transition: opacity .25s ease-in-out; }
+			.deliciousBox li:hover img { opacity: 0.8; }
+			.deliciousBox h2 { padding-left: 90px; display: inline-table; font-size: 50px; line-height: 64px; font-weight: normal; text-align: center; background: url(../images/delicious_bg1.png) left center no-repeat; } 
+			.deliciousBox span { padding-right: 90px; font-family: 'WaltographRegular'; display: inline-block; background: url(../images/delicious_bg2.png) right center no-repeat; } 
+		
+			/* -------------------- temperature box -------------------- */
+			.temperatureBox { width: 100%; overflow: hidden; position:relative; color: #fff; background: #4a4f48; }
+			.temperatureBox h2 { padding-bottom: 0.794em; font-size: 1.889em; font-family: 'MyriadProBold'; }
+			.temperatureBox .flexslider { width: 100%; }
+			.temperatureBox .flex-control-nav {width: 100%; position: absolute; z-index: 999; bottom: 40px; text-align: center; }
+			.temperatureBox .flex-control-nav li { margin: 0 6px; display: inline-block; zoom: 1; *display: inline; }
+			.temperatureBox .flex-control-nav a { text-indent: -9999px; display: inline-block; overflow: hidden; width: 22px; height: 22px; background: url(../images/slider_nonactive.png) center center no-repeat; }
+			.temperatureBox .flex-control-nav a.flex-active { background: url(../images/slider_active.png) center center no-repeat; }
+			.temperatureBox p { margin-bottom: 4em; font-size: 1.333em; }
+			.temperatureBox .text { padding: 194px 0 0 0; max-width: 302px; position: absolute; top: 0px; }
+			.temperatureBox .text a { padding: 0 2.650em; position: relative; z-index: 10000; color: #fff; text-decoration: none; font-size: 1.333em; line-height: 2.650em; display: inline-block; border: #fff solid 2px; border-radius: 2px; }
+			.temperatureBox .text a:hover { background: #fff; color: #333132; }
+			.temperatureBox img { margin: 0 auto; }
+		
+			/* -------------------- copy box -------------------- */
+			.buyBox { padding: 16px 0; width: 100%; overflow: hidden; background: #094e75; color: #fff; text-align: center;  }
+			.buyBox p { font-size: 1.889em; font-family: 'MyriadProLight'; line-height: 69px; }
+			.buyBox span { position: relative;  background: url(../images/flipcard.png) no-repeat; display: inline-block; width: 201px; text-indent: -9999px; }
+			.buyBox a { padding: 0 1.176em; color: #fff; text-decoration: none; font-size: 0.824em; text-transform: uppercase; line-height: 1.324em; display: inline-block; border: #fff solid 2px; border-radius: 2px; }
+			.buyBox a:hover {background: #fff; color: #333132;}
+		
+			/* -------------------- copy box -------------------- */
+			.appBox { padding: 119px 0 100px 0; width: 100%; overflow: hidden; background: #595c4d url(../images/bg5.jpg) center bottom no-repeat; color: #fff; }
+			.appBox .text { max-width: 463px; float: right; }
+			.appBox p { padding-bottom: 1.667em; font-size: 1.333em; font-family: 'MyriadProSemibold'; }
+			.appBox a { float: left; display: inline-block; }
+			.appBox a.app { margin-right: 45px; }
+		
+			/* -------------------- about box -------------------- */
+			.aboutBox { padding: 36px 0 0 0; width: 100%; overflow: hidden; background: #535254; color: #fff; text-align: center;  }
+			.aboutBox .text { max-width: 900px; font-family: 'MyriadProLight'; }
+			.aboutBox p { font-size: 1.444em; }
+			.aboutBox ul { margin: 45px 0 40px 0; }
+			.aboutBox li { display: inline-block; }
+			.aboutBox p a { font-family: 'MyriadProSemibold'; color: #fff; }
+			.aboutBox a:hover { text-decoration: none; }
+			.aboutBox li a { margin: 0 36px; text-indent: -9999px; display: inline-block; width: 142px; height: 142px; background-image: url(../images/social_media.png);  background-repeat: no-repeat; }
+			.aboutBox li a.fb { background-position: 0 0; }
+			.aboutBox li a.fb:hover { background-position: 0px -142px; }
+			.aboutBox li a.twitter {  background-position: -142px 0px; }
+			.aboutBox li a.twitter:hover { background-position: -142px -142px; }
+			.aboutBox li a.youtube { background-position: -284px 0; }
+			.aboutBox li a.youtube:hover { background-position: -284px -142px; }
+			.aboutBox li a.google { background-position: -426px 0px; }
+			.aboutBox li a.google:hover { background-position: -426px -142px; }
+			
+			/* -------------------- listing -------------------- */
+			.listingWrap{width:100%;}
+			.listingWrap .filterwrap{ padding:32px 59px 22px 0;width: 100%;}
+			.listingWrap .filterwrap h2{ padding:0 0 0 59px;color:#414042;float:left;font-size:24px; font-family:MyriadProRegular;line-height: 24px; font-weight:normal;} 
+			.listingWrap .filterwrap.queryhead {padding-right:0;padding-left: 5px;   border-bottom: 1px solid #fff;}
+			.listingWrap .queryhead h2{ padding:0 0 0 5px;}
+			.listingWrap .filterwrap .filter-right{ float:right;}
+			.listingWrap .filterwrap .filter-right ul li{ float:left; border-left:1px solid #939598; list-style:none; margin:0 0 0 29px;}
+			.listingWrap .filterwrap .filter-right ul li:first-child{border:none;}
+			.listingWrap .filterwrap .filter-right ul li .filter a{ float:right;}
+			.listingWrap .filterwrap .filter-right ul li .filter span{float:left; font-family:MyriadProLight; font-size:18px; color:#414042;line-height: 31px;padding: 0 24px;}
+			.listingWrap .filterwrap .filter-right .filter{ border:1px solid #a7a9ac; }
+			.listingWrap .filterwrap .filter-right ul li .search{padding:0 0 0 30px; position:relative;}
+
+			/* -------------------- search -------------------- */
+			.search input[type="text"]{display:none;padding: 0 35px 0 5px; border:1px solid #a7a9ac; height:30px; line-height:30px; font-family:MyriadProRegular; font-size:14px; width:200px;}
+			.search input[type="submit"]{ position:absolute; right:7px; cursor:pointer;    border:none;background:url(../images/search-icon.png) no-repeat; width:26px; height:33px;}
+				
+			/* -------------------- recipeList box -------------------- */
+			.recipeList ul li { list-style:none; border:1px solid #f1f2f2; float:left; padding: 9px; margin: 0 0 10px 44px; width: 100%; max-width: 28.37%; }
+			.recipeList ul li .text { padding: 4px; border: #d7d7d7 solid 1px; }
+			.recipeList ul li:hover{ border:1px solid #959595}
+			.recipeList ul li:hover .text { border: #f1f2f2 solid 1px; }
+			.recipeList ul li .recipe-name{ background:#fff; padding:19px;}
+			.recipeList ul li .recipe-name span{color:#086d3b; font-size:1.222em; font-family:MyriadProRegular;line-height: 22px; display:block;}
+			.recipeList ul li .recipe-name p{color:#414042;font-size:0.889em; font-family:MyriadProRegular;line-height: 22px;   padding: 15px 0 0;}
+			
+			/* -------------------- filter -------------------- */
+			#filter-wrapper{ display:none; width:100%; background:#fff;margin-bottom: 10px;}
+			#filter-wrapper .filterbox{padding:30px 59px;}
+			#filter-wrapper .filterbox .filtertype{ float:left;}
+			.typeon{ clear:left;}
+			.switch-button-label { float: left; font-size: 20px; line-height: 38px; cursor: pointer; font-family: MyriadProRegular; }
+			.switch-button-label.off { color: #93ac45; }
+			.switch-button-label.on { color: #adacac; }
+			.switch-button-background { background: url(../images/icon-off.png) no-repeat; float: left; height: 33px !important; margin: 1px 10px; position: relative; width: 76px !important; }
+			.switch-button-background.checked { background: url(../images/icon1.png) no-repeat; float: left; height: 33px !important; margin: 1px 10px; position: relative; width: 76px !important; }
+			.switch-button-button { position: absolute; width: 38px !important; height: 38px !important; left: -1px; top : -1px; background: url(../images/icon.png) no-repeat center; }
+			#filter-wrapper .filterbox .filtertype.type{ width:390px;}
+			#filter-wrapper .filterbox .filtertype.categories{ width:415px;}
+			#filter-wrapper .filterbox .filtertype.cookingtime{ float:right;}
+			#filter-wrapper .filterbox .filtertype h3{padding:0 0 20px 0;font-family:MyriadProSemibold; font-weight:normal; font-size:20px; color:#414042;line-height: 20px; }
+			#filter-wrapper .filterbox .filtertype ul li{ float:left; list-style:none; min-width:115px;}
+			#filter-wrapper .filterbox .filtertype ul li label{ padding:0 22px 0 12px; font-family:MyriadProLight; font-size:18px; color:#414042;line-height: 31px;}
+			
+			/* -------------------- query form -------------------- */
+			#queryform{ padding:20px 0 40px 0;}
+			#queryform .queryform label{ padding:0 0 15px 0; color:#414042;font-family:MyriadProRegular;line-height:18px; font-size:18px; width:100%;display: block;}
+			#queryform .queryform { margin:0 0 30px 0; }
+			#queryform .queryform input[type="text"]{ background:#fff; border:1px solid #e1e1e1; padding:0 5px; height:27px; line-height:27px; width:511px;color:#414042;font-family:MyriadProRegular; font-size:16px;}
+			#queryform .queryform textarea{ background:#fff; border:1px solid #e1e1e1; padding:5px; width:511px;color:#414042;font-family:MyriadProRegular;line-height:18px; font-size:16px; resize:none; height:150px;}
+			#queryform input[type="submit"]{ cursor:pointer; background:#fff;width:220px; border:1px solid #7cb92e; height:50px;font-size:20px; color:#7cb92e;}
+			
+			/* --------------------Faq -------------------- */
+			.faqsearch { position: relative; }
+			.faqsearch input[type="text"] { color: #58595b; font-family: MyriadProRegular; line-height: 42px; font-size: 18px; width: 100%; padding: 0 5px; height: 42px; border: none; }
+			.faqsearch input[type="submit"] { border: none; background: url(../images/faqsearch.jpg) no-repeat; position: absolute; height: 42px; position: absolute; z-index: 9; cursor: pointer; top: 0; right: 0; width: 65px; }
+			.faq-wrap { float: left; width: 908px; padding-top: 25px; }
+			.faqcontent { margin-bottom: 20px; }
+			.faqcontent h4 { color: #231f20; font-family: MyriadProRegular; font-size: 22px; font-weight: normal; padding-bottom: 15px; }
+			.faqcontent p { font-family: MyriadProRegular; font-size: 18px; line-height: 23px; color: #414042; margin: 10px 0; }
+			.sidebar { width: 222px; float: right; padding: 20px 0 0 0; }
+			.sidebar .productbtn { width: 221px; height: 50px; background: #7cb92e; }
+			.sidebar .productbtn a { color: #fff; text-decoration: none; text-align: center; display: block; height: 50px; line-height: 50px; font-family: MyriadProRegular; font-size: 20px; }
+			.sidebar .foodbtn { width: 221px; height: 48px; background: #fff; border: 1px solid #7cb92e; margin: 1px 0 0 0; }
+			.sidebar .foodbtn a { color: #7cb92e; text-decoration: none; text-align: center; display: block; height: 48px; line-height: 48px; font-family: MyriadProRegular; font-size: 20px; }
+			.sidebar p { color: #231f20; font-family: MyriadProRegular; font-size: 20px; margin: 30px 0 10px 0; line-height: 23px; }
+			.sidebar .usermanual { color: #7cb92e; font-family: MyriadProRegular; line-height: 32px; font-size: 19px; background: url(..//images/psd.png) no-repeat left center; padding: 0 0 0 28px; }
+	
+			/*Recipe Detail*/
+			.detailbanner{ width:100%;position:relative;}
+			.detailbanner .bannertitle{ position:absolute; top:150px; width: 100%; font-family:WaltographRegular; font-size:70px; color:#fff; z-index:9; text-align:center;}
+			.detailbanner .bannertitle img{   display: inline-block;margin: 0 27px; vertical-align: middle;}
+			.detailbannercontent{    padding:15px 0;width: 100%;position:absolute; z-index:9; bottom:0; background:url(../images/banerbg.png) repeat;}
+			.detailbannercontent .bannercontent-left{float:left;}
+			.detailbannercontent .bannercontent-left h4{color:#fff;font-family:MyriadProSemibold; font-size:22px; font-weight:normal; }
+			.detailbannercontent .bannercontent-left p{color:#fff;font-family:MyriadProSemibold; font-size:18px; }
+			.detailbannercontent .bannercontent-right{float:right;}
+			.detailbannercontent .bannercontent-right ul li{list-style:none; float:left; margin-left:30px;}
+			#recipedetail{padding-top:50px;}
+			#recipedetail h2{font-family:MyriadProBold; font-size:34px; color:#5daa3a; line-height:34px; font-weight: normal;	}
+			#recipedetail h3{font-family:MyriadProSemibold; font-size:22px; color:#414042;  line-height:22px;font-weight: normal;padding:40px 0 15px 0;	}
+			#recipedetail ul li{ list-style:none;color:#414042;font-family:MyriadProRegular; line-height:40px; font-size:18px;}
+			#recipedetail p{color:#414042;font-family:MyriadProRegular; line-height:40px; font-size:18px; }
+			#recipedetail .recipe-left{ float:left; width:48%;}
+			#recipedetail .recipe-right{float:right; width:48%;}
+			.social-share{ padding:40px 0;}
+			.social-share p{font-family:MyriadProSemibold; font-size:18px; color:#414042;  line-height:22px; text-align:center; margin-bottom:30px;}
+			.social-share ul {margin: 0 auto;    width: 220px;}
+			.social-share ul li{ list-style:none; float:left;  margin: 0 0 0 30px;}
+			.social-share ul li:first-child{ margin:0;}
+					/*Feature Page*/
+			.featurehead h2{color:#5daa3a; font-weight:normal;font-family:MyriadProRegular;font-size:34px; padding:30px 0 0 0; text-align:center;}
+			.featurehead h2 span{font-family:MyriadProSemibold; border-bottom:1px solid #5daa3a;  }
+			.feturewrap ul li{list-style:none;   overflow: hidden;   width: 100%;  display: table; background:url(../images/line.jpg) center center no-repeat;}
+			.feturewrap ul li:nth-child(odd) img{ float:left;}
+			.feturewrap ul li:nth-child(odd) .feturecontent{   display: table-cell;vertical-align: middle;}
+			
+			.feturewrap ul li:nth-child(even) img{ float:right;}
+			.feturewrap ul li:nth-child(even) .feturecontent{display: table-cell;vertical-align: middle;}
+			.feturecontent p{color:#414042;font-family:MyriadProRegular;}
+			.feturecontent h3{color:#5daa3a;font-family:MyriadProSemibold;font-weight:normal;}
+			.feturewrap{ padding:50px 59px;}
+			.feturewrap .feturecontent{  width:400px;}		
+				
+			/* -------------------- copy box -------------------- */
+			.copyBox { width: 0px; }
+		
+	/* -------------------- footer container -------------------- */
+	#footerCntr { overflow: hidden; width: 100%; }
+	#footerCntr p {padding:20px 10px; text-align:center; color:#414042; font-family:MyriadProRegular;}
+	
+@media only screen and (max-width : 1500px) {
+	
+	.temperatureBox { font-size: 16px; }
+	.temperatureBox p { margin-bottom: 2em; }
+	
+}
+
+@media only screen and (max-width : 1300px) {
+	
+	.temperatureBox { font-size: 14px; }
+	.temperatureBox p { margin-bottom: 1em; }
+	.temperatureBox .text{ padding-top: 50px; }
+	
+	.howtouseBox { background-position: left center;  }
+
+
+}
+
+@media only screen and (max-width : 1190px) {
+	
+	.menuBox { font-size: 16px; }
+	
+	.sliderBox { font-size: 17px;}
+	.sliderBox .slidercontent { padding-top: 200px; }
+	
+	#filter-wrapper .filterbox { width: 100%; text-align: center; }
+	#filter-wrapper .filterbox .filtertype { display: inline-block; text-align: left; float: none; vertical-align: top; }
+	#filter-wrapper .filterbox .filtertype.type { width: 25%; }
+	#filter-wrapper .filterbox .filtertype.categories { width: 40%; }
+	#filter-wrapper .filterbox .filtertype.cookingtime { float: none; }
+	
+	.faq-wrap { width: 77%; }
+	.detailbanner .bannertitle{ top:20%;}
+		.feturewrap ul li{ margin-bottom: 20px;}
+	.feturewrap{ padding:40px 20px;}
+	.feturewrap ul li img{ width:70%;}
+}
+
+@media only screen and (max-width : 1100px) {
+	
+	.menuBox { font-size: 15px; }
+	.menuBox a { padding: 0 0.6em 10px;  }
+	
+	.foodBox { font-size: 17px; }
+	
+	.appBox { background-position: -130px bottom; }
+	
+}
+
+@media only screen and (max-width : 991px) {
+	
+	#headerCntr h1 { margin-left: 60px; }
+	
+	.navbar { display: block; }
+	
+	.menuBox { position: fixed; top: 50px; left: 0px; display: none; background: #fff; width: 100%; max-width: 250px; border: #999 solid 1px; text-align: left; }
+	.menuBox ul { padding: 10px 0; list-style: none; }
+	.menuBox li { float: none; line-height: 2em; }
+	.menuBox a { padding: 0px 1.111em 0 1.111em; font-size: 1em; display: block; font-family: 'MyriadProSemibold'; color: #333132; text-decoration: none; text-transform: uppercase; }
+	.menuBox a:hover, .menuBox li.current-menu a { color: #999; }
+		
+	.dack { display: none; }
+	
+	.foodBox { font-size: 15px; background-position: center bottom; background-size: auto 100%;  }
+	
+	.sliderBox { font-size: 15px;}
+	.sliderBox .slidercontent { padding-top: 100px; }
+	.sliderBox .slidercontent h2, .sliderBox .slidercontent p { padding-bottom: 0.5em; max-width: 100%; }
+	.sliderBox .flex-control-nav { bottom: 10px; }
+	.sliderBox .flex-control-nav a { width: 16px; height: 16px; background-size: 100% 100%!important; }
+	
+	.howtouseBox { height: 625px; font-size: 15px; background-size: 100% 100%; height: auto; padding: 80px 0;  }
+	.howtouseBox .text { max-width: 100%;}
+	
+	.recipeList ul { text-align: center; }
+	.recipeList ul li { max-width: 310px; display: inline-block; text-align: left; float: none; margin-left: 20px; }
+	.faq-wrap { width: 100%; float: none; }
+	.sidebar { float: none; margin: 0 auto; }
+	
+	.aboutBox { font-size: 16px; }
+	.aboutBox li a { margin: 10px; }
+	
+	.appBox { font-size: 16px; }
+	.appBox .text { margin: 0 auto; float: none; }
+	
+	.temperatureBox .flex-control-nav { bottom: 10px; }
+	.temperatureBox .flex-control-nav a { width: 16px; height: 16px; background-size: 100% 100%!important; }
+	.temperatureBox .text { max-width: 100%; }
+	.feturewrap ul li {   background:none;}
+	
+}
+
+@media only screen and (max-width : 850px) {
+	
+	.listingWrap .filterwrap { padding-right: 0; }
+	.listingWrap .filterwrap .filter-right { float: none; margin: 30px auto 0; width: 246px; }
+	.listingWrap .filterwrap h2 { padding: 0; text-align: center; float: none; }
+	
+	#filter-wrapper .filterbox .filtertype.type { width: 100%; }
+	#filter-wrapper .filterbox .filtertype.categories { width: 100%; }
+	#filter-wrapper .filterbox .filtertype ul { clear: none; float: left; }
+	#filter-wrapper .filterbox .filtertype { margin: 0 0 20px 0; }
+	#filter-wrapper .filterbox .filtertype.cookingtime { width: 100%; }
+	
+	.detailbanner .bannertitle{ top:10%;font-size: 50px;}
+	
+	.howtouseBox { height: 720px; font-size: 15px; background-size: 100% 100%; height: auto; padding: 50px 0;  }
+
+}
+
+@media only screen and (max-width : 767px) {
+	
+	.foodBox h2 { padding-bottom: 1.5em; }
+	.foodBox .left { max-width: 100%; }
+	.foodBox .right { max-width: 100%; }
+	.foodBox img  { margin-top: 10px; }
+	
+	.sliderBox { font-size: 13px;}
+	.sliderBox .slidercontent { padding-top: 70px; }
+	
+	.deliciousBox ul { text-align: center; }
+	.deliciousBox li { float: none; display: inline-block; max-width: 100%; }
+	
+	.temperatureBox { font-size: 12px; }
+	.temperatureBox h2 { font-size: 1.2em; }
+	.temperatureBox .text a { font-size: 1.133em; }	
+	
+	.aboutBox { font-size: 15px; }
+	.aboutBox li a { margin: 0px 50px 10px; } 
+	
+	.appBox { font-size: 15px; }
+	
+	.buyBox { font-size: 16px; }
+	
+}
+
+@media only screen and (max-width : 639px) {
+	
+	#headerCntr { margin: 10px 0; }
+	#headerCntr h1 { margin: 10px 0; float: none; display: inline-block; }
+	#headerCntr .float-right { margin: 10px 0; float: none; }
+	#headerCntr .kenStar, #headerCntr .flipcard { float: none; vertical-align: top; }
+	#headerCntr .flipcard { margin-right: 10px; }
+	
+	.sliderBox .slidercontent { padding-top: 30px; }
+	
+	.foodBox { min-height: 550px; }
+	
+	.howtouseBox { font-size: 13px; }
+	.howtouseBox .text { max-width: 100%;}
+	
+	.deliciousBox h2 { font-size: 30px; }
+	
+	.temperatureBox .text { padding-top: 20px; }
+	.temperatureBox h2 { padding-bottom: 0px;}
+	.temperatureBox p { margin-bottom: 0px; }
+	.temperatureBox a { padding: 0 0.65em; line-height: 1.65em; }
+	
+	#queryform .queryform input[type="text"] { width: 98%; }
+	#queryform .queryform textarea { width: 98%; }
+	#queryform input[type="submit"] { margin: 0 auto; }
+	
+	.listingWrap .queryhead h2 { float: none; text-align: center; }
+	.recipeList ul li { margin-left: 0; }
+	
+	.aboutBox { font-size: 13px; }
+	
+	.appBox { font-size: 13px; }
+	
+	.buyBox { font-size: 13px; }
+	.buyBox p { line-height: 55px; } 
+	
+	.appBox .text { text-align: center; }
+	.appBox .text a { float: none; }
+	.appBox a, .appBox a.app { margin: 0 10px 5px; }
+	
+	#recipedetail .recipe-left{ float:none; width:100%;}
+	#recipedetail .recipe-right{float:none; width:100%; padding-top:20px;}
+	.detailbannercontent{ padding:15px 0;width: 100%;position:static;  background:url(../images/banerbg.png) repeat;}
+	.detailbannercontent .bannercontent-left{float:none;}
+	.detailbannercontent .bannercontent-left h4{color:#fff; }
+	.detailbannercontent .bannercontent-left p{color:#fff;}
+	.detailbannercontent .bannercontent-right{float:none; padding: 20px 0 0;}
+	.detailbannercontent .bannercontent-right ul{ text-align:center;}
+	.detailbannercontent .bannercontent-right ul li{float:none; margin-left:10px; display:inline-block;}
+	
+	.feturewrap ul li img{ width:60%;   margin: 0 auto;}
+	.feturewrap ul li .feturecontent{ display:block; width:100%;}
+	
+	
+	.feturewrap ul li:nth-child(odd) img{ float:none;}
+			.feturewrap ul li:nth-child(odd) .feturecontent{   display:block;}
+			
+			.feturewrap ul li:nth-child(even) img{ float:none;}
+			.feturewrap ul li:nth-child(even) .feturecontent{display:block;}
+.feturewrap ul li {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+		
+}
+
+@media only screen and (max-width : 479px) {
+	
+	.sliderBox .slidercontent { padding-top: 10px; }
+	.sliderBox { font-size: 11px;}
+	
+	.howtouseBox .text img { width: 100%; }
+	
+	.temperatureBox { font-size: 11px; }
+	.temperatureBox .text { padding-top: 5px; } 
+	
+	.deliciousBox li { margin: 5px 0px;  }
+	
+	.detailbanner .bannertitle img { display: none; }
+	.detailbanner .bannertitle { font-size: 40px; top: 20px; }
+	
+	.appBox { padding: 90px 0; }
+	
+}
+
